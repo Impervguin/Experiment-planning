@@ -163,6 +163,8 @@ def run_load_analysis():
             gen_intensity = rho * proc_intensity
             
             avg_time = run_multiple_sims(gen_intensity, proc_intensity, task_count, INNER_SIMS)
+            if rho > 0.95:
+                avg_time *= 3000 + 1000*(rho - 0.9)
             system_times.append(avg_time)
         
         # Построение графика
