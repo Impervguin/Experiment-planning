@@ -28,7 +28,7 @@ INNER_SIMS = 30  # Количество прогонов для усреднен
 
 def setup_custom_font():
     """Настройка кастомного шрифта arial"""
-    possible_paths = ["/usr/share/fonts/TTF/arial.ttf"]
+    possible_paths = ["/usr/share/fonts/truetype/DejaVuSans.ttf"]
     for path in possible_paths:
         if os.path.exists(path):
             try:
